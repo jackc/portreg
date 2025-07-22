@@ -42,22 +42,14 @@ the next available port starting from 3100.`,
 				}
 				return err
 			}
-			if assignDescription != "" {
-				fmt.Printf("Assigned port %d to %s\n", assignPort, assignDescription)
-			} else {
-				fmt.Printf("Assigned port %d\n", assignPort)
-			}
+			fmt.Println(assignPort)
 		} else {
 			// Auto-assign next available port
 			port, err := reg.AssignNextAvailable(assignDescription, assignPath)
 			if err != nil {
 				return err
 			}
-			if assignDescription != "" {
-				fmt.Printf("Assigned port %d to %s\n", port, assignDescription)
-			} else {
-				fmt.Printf("Assigned port %d\n", port)
-			}
+			fmt.Println(port)
 		}
 
 		return nil
