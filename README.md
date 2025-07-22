@@ -58,18 +58,10 @@ The `list` command is used to list all assigned ports.
 
 ```
 $ portreg list
-12345
-  Description: Foo PostgreSQL server
-  Path: /home/jack/dev/foo
-12346
-  Description: Foo web server
-  Path: /home/jack/dev/foo
-12347
-  Description: Bar web server
-  Path: /home/jack/dev/bar
-12348
-  Description: -
-  Path: -
+PORT  DESCRIPTION                               PATH
+----  -----------                               ----
+3100  My service                                /Users/jack/dev/foo
+3103  My service 2                              /Users/jack/dev/bar
 ```
 
 Options:
