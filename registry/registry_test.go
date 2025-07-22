@@ -65,7 +65,9 @@ func TestInit(t *testing.T) {
 		}
 		assert.True(t, blockedDescriptions["MySQL default port"])
 		assert.True(t, blockedDescriptions["PostgreSQL default port"])
-		assert.True(t, blockedDescriptions["Common Ruby on Rails ports"])
+		assert.True(t, blockedDescriptions["Redis default port"])
+		assert.True(t, blockedDescriptions["Common HTTP alternative port"])
+		assert.True(t, blockedDescriptions["MongoDB default port"])
 	})
 
 	t.Run("fails if file already exists", func(t *testing.T) {
