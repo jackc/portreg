@@ -100,8 +100,8 @@ Example file:
       "description": "common Ruby on Rails ports"
     }
     {
-      "port": "5432,15432",
-      "description": "Common PostgreSQL ports"
+      "port": "5432",
+      "description": "default PostgreSQL port"
     }
   ]
 }
