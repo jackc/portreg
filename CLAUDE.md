@@ -8,7 +8,7 @@ portreg is a port registry tool written in Go that helps developers manage port 
 
 ## Key Commands
 
-The tool implements four main commands:
+The tool implements the following commands:
 - `init` - Initialize the registry file at `$HOME/.portreg.json` (or custom location via `-r` flag)
 - `assign` - Assign an unused port to a project (auto-finds next available or accepts specific port via `-p` flag)
   - Description is optional via `-d` flag
@@ -17,6 +17,7 @@ The tool implements four main commands:
 - `unassign <port>` - Release a port assignment by port number
 - `list` - Display all assigned ports
   - Supports `--format json` for JSON output
+- `version` - Print the version number (current: v0.1.0)
 
 ## Development Commands
 
@@ -51,7 +52,8 @@ portreg/
 │   ├── init.go         # Init command
 │   ├── assign.go       # Assign command  
 │   ├── unassign.go     # Unassign command
-│   └── list.go         # List command
+│   ├── list.go         # List command
+│   └── version.go      # Version command
 ├── registry/           # Core registry package
 │   ├── registry.go     # Registry type and all core logic
 │   └── registry_test.go # Unit tests
