@@ -71,8 +71,7 @@ go test ./...
    - The default registry file created by `init` should have `blockedPorts` for the default ports for MySQL, PostgreSQL, and other common network servers used in web development.
 
 2. **Command Structure**
-   - Do not use a 3rd party CLI framework (e.g., cobra, urfave/cli) for command handling
-   - Use the standard library exclusively
+   - Use cobra for command handling
    - Each command should have appropriate flags and arguments
    - Provide helpful error messages and usage information
 
@@ -87,12 +86,12 @@ go test ./...
    - Handle filesystem permissions issues
 
 5. **Core Functionality**
-   - Storage layer should be independent from the CLI or the port choosing logic
-   - Port choosing logic should be independent from the CLI or storage layer
+   - Core port logic and persistence logic should be an its own package
+   - It should be independent from the CLI
 
 6. **Testing**
+   - Use `github.com/stretchr/testify`
    - Extensively test all functionality
-   - Use the standard library only
 
 ## Common Development Tasks
 
